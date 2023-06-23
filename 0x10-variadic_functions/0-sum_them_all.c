@@ -15,10 +15,10 @@ int sum = 0;
 
 va_list add;
 
-va_start (add, n);
+va_start(add, n);
 
 for ( i = 0; i < n; i++) {
-   sum += va_arg(add,int);		
+   sum += va_arg(add, int);		
 }
 
 va_end(add);
