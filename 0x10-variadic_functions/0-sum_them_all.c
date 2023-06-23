@@ -8,20 +8,20 @@
  * Return: always 0 on success
  */
 
-int sum_them_all(const unsigned int n, ...) {
+int sum_them_all(const unsigned int n, ...)
+{
+    unsigned int i;
+    int sum = 0;
+    va_list args;
 
-unsigned int i;
-int sum = 0;
+    va_start(args, n);
 
-va_list add;
+    for (i = 0; i < n; i++) {
+        sum += va_arg(args, int);
+    }
 
-va_start(add, n);
+    va_end(args);
 
-for ( i = 0; i < n; i++) {
-   sum += va_arg(add, int);		
+    return sum;
 }
 
-va_end(add);
-
-return sum;
-}
