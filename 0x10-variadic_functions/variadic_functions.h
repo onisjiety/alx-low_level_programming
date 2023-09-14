@@ -8,3 +8,4 @@ void print_all(const char * const format, ...);
 int main(void);
 
 #endif
+
